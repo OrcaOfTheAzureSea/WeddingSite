@@ -31,12 +31,12 @@ body{
     color:blueviolet;
     font-size: 24px;
 }
-.one{
+.welcome{
     background: url("./images/flowers.avif") center/contain no-repeat;
 }
-.two{
+.gifts{
     background: url("./images/12954858-1654857573218820.png") center/contain no-repeat;
 }
-.three{
+.kids{
     background: url("./images/crying\ toddler.png") center/contain no-repeat;
 }
