@@ -31,14 +31,20 @@ body{
     color:blueviolet;
     font-size: 24px;
 }
+.backgroundImage{
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .welcome{
-    background: url("./images/flowers.avif") center/contain no-repeat;
+  background-image: url("./images/flowers.avif");
 }
 .gifts{
-    background: url("./images/12954858-1654857573218820.png") center/contain no-repeat;
+  background-image: url("./images/12954858-1654857573218820.png");
 }
 .kids{
-    background: url("./images/crying\ toddler.png") center/contain no-repeat;
+  background-image: url("./images/crying\ toddler.png");
 }
 .llama{
   display: block;

@@ -8,6 +8,9 @@ var allowedKeys = {
   66: 'b'
 };
 
+// audio for playing music
+var audio = new Audio("./music/Merry Go Round of Life - Howl's Moving Castle (Joe Hisaishi).mp3");
+
 // the 'official' Konami Code sequence
 var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
 
@@ -38,8 +41,6 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-
-  var audio = new Audio("./music/Merry Go Round of Life - Howl's Moving Castle (Joe Hisaishi).mp3");
   audio.play();
 
   var llamaImage = document.getElementById("llama");
@@ -62,4 +63,15 @@ function imageClick(e){
 function imageClose(){
   var modal = document.getElementById("myModal");
   modal.style.display = "none"
+}
+
+function closeKonami(){
+  
+  audio.pause();
+  audio.currentTime=0;
+
+  var llamaImage = document.getElementById("llama");
+  llamaImage.hidden = true;
+  var content = document.getElementById("wrapper");
+  content.hidden = false;
 }
