@@ -75,3 +75,28 @@ function closeKonami(){
   var content = document.getElementById("wrapper");
   content.hidden = false;
 }
+
+function unfade(element) {
+  var op = 0.1;  // initial opacity
+  element.style.display = 'block';
+  var timer = setInterval(function () {
+      if (op >= 1){
+          clearInterval(timer);
+      }
+      element.style.opacity = op;
+      element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+      op += op * 0.1;
+  }, 100);
+}
+
+function delayedUnfade(element, delayTime) {
+  setTimeout(() => {unfade(element)},delayTime)
+}
+
+function delayedTextUnfade(elementId, delayTime) {
+  var element = document.getElementById(elementId);
+  if (element != null)
+  {
+    setTimeout(() => {unfade(element)},delayTime)
+  }
+}
