@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <script src="script.js"></script>
+    <script src="script.js">
+        window.onload = includeHTML();
+        </script>
     <div id="llama" hidden>
       <img class="llama" src="./images/llama-icon-28.jpg">
       <button onclick="closeKonami()">close</button>
@@ -24,61 +26,29 @@
             <div include-html="welcome.html"></div> 
         </section>
         <section class="thanks backgroundImage">
-            <div class="content">
-            <h1>Thank you section</h1>
-            <p class="subheading">thank you section</p>
-            </div>
+            <div include-html="thanks.html"></div> 
         </section>
         <section class="service backgroundImage">
-            <div class="content">
-            <h1>Service section</h1>
-            <p class="subheading">Details about the service</p>
-            </div>
+            <div include-html="service.html"></div> 
         </section>
         <section class="reception backgroundImage">
-            <div class="content">
-            <h1>Reception section</h1>
-            <p class="subheading">Details about the reception</p>
-            </div>
+            <div include-html="reception.html"></div> 
         </section>
         <section class="menu backgroundImage">
-            <div class="content">
-            <h1>Menu section</h1>
-            <img id="menuImage" src="./images/menu.png" onclick="imageClick(event)" style="width:80%;max-width:300px">
-            <div id="myModal" class="modal">
-                <span class="close" onclick="imageClose()">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-              </div>
-            </div>
+            <div include-html="menu.html"></div> 
         </section>
         <section class="kids backgroundImage">
-            <div class="content">
-            <h1>Leave your kids at home</h1>
-            <p class="subheading">We only want our nephews and neices shouting</p>
-        </div>
+            <div include-html="kids.html"></div> 
         </section>
         <section class="gifts backgroundImage">
-            <div class="content">
-            <h1>Buy us some shit</h1>
-            <p class="subheading">Rob wants a Lego Millenium falcon hint hint....</p>
-        </div>
+            <div include-html="gifts.html"></div> 
         </section>
         <section class="photos backgroundImage">
-            <div class="content">
-            <h1>Photo section</h1>
-            <p class="subheading"></p>photo section</p>
-            </div>
+            <div include-html="photos.html"></div> 
         </section>
         <section class="enjoy backgroundImage">
-            <div class="content">
-            <h1>Enjoy section</h1>
-            <p class="subheading">enjoy section</p>
-            </div>
+            <div include-html="enjoy.html"></div> 
         </section>
     </div>
-    <script>
-        window.onload = includeHTML();
-    </script>
   </body>
 </html>
