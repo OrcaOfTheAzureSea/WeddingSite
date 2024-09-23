@@ -101,6 +101,14 @@ function delayedTextUnfade(elementId, delayTime) {
   }
 }
 
+function passwordChecker(){
+  var element = document.getElementById("password")
+  if (element != null && element.value == "password")
+  {
+    location.href = "thebigday.html";
+  }
+}
+
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
