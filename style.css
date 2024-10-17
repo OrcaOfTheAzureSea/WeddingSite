@@ -22,12 +22,21 @@ section{
     justify-content: center;
     scroll-snap-align: start;
 }
+
+.footertext{
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
 h1{
     font-size: 150px;
     line-height: 150px;
     color:blueviolet;
     margin:0;
 }
+a, a:hover, a:active, a:visited { color: white; }
 
 .passwordPage{
   margin: auto;
@@ -38,8 +47,8 @@ h1{
 body{
     margin:0;
     font-family:'Didact-Gothic', sans-serif;
-
 }
+
 .subheading{
     color:blueviolet;
     font-size: 24px;
@@ -63,12 +72,13 @@ body{
   animation-delay: 5s; /* Delay the start of the animation by 2 seconds */
 }
 .index{
-  background-image: url("./images/Grainne\ +\ Robert~84.jpg");
+  background-image: url("./images/Grainne\ +\ Robert~105.jpg");
   color: white;
   font-size: x-large;
   font-family: serif;
   font-stretch: expanded;
   text-shadow: -8px 5px #0a0a0a;
+  overflow: hidden;
 }
 .welcome{
   background-image: url("./images/flowers.avif");
