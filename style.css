@@ -92,6 +92,14 @@ body{
   padding: 20px;
   text-align: center;
 }
+.grid-item-split {
+  text-align: center;
+}
+.split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three columns of equal width */
+  /*gap: 10px; /* Adjust the gap as needed */
+}
 .welcome{
   background-image: url("./images/flowers.avif");
 }
