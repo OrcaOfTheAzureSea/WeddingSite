@@ -82,6 +82,16 @@ body{
   text-shadow: -8px 5px #0a0a0a;
   overflow: hidden;
 }
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr; /* Top row full width */
+  grid-template-rows: auto 1fr; /* Split row beneath */
+  /*gap: 10px; /* Adjust the gap as needed */
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
 .welcome{
   background-image: url("./images/flowers.avif");
 }
