@@ -25,6 +25,8 @@ section{
 
 .footertext{
   position: absolute;
+  font-family: serif;
+  font-size: x-large;
   bottom: 5px;
   text-align: center;
   width: 100%;
@@ -74,8 +76,8 @@ body{
 .index{
   background-image: url("./images/Grainne\ +\ Robert~105.avif");
   color: white;
-  font-size: x-large;
-  font-family: serif;
+  font-size: 2.5em;
+  font-family: weddingFont;
   font-stretch: expanded;
   text-shadow: -8px 5px #0a0a0a;
   overflow: hidden;
@@ -102,6 +104,11 @@ body{
   left: 50%;
   opacity: 0;
   transform: translate(-50%, -50%);
+}
+
+@font-face {
+  font-family: weddingFont;
+  src: url("./fonts/WeddingCeremony.otf");
 }
 
 @keyframes rotation {
