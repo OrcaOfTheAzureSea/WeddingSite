@@ -40,6 +40,10 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+window.onload = function() {
+  includeHTML();
+};
+
 function activateCheats() {
   audio.play();
 
@@ -110,6 +114,7 @@ function passwordChecker(){
 }
 
 function includeHTML() {
+  console.log("This has been run")
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
   z = document.getElementsByTagName("*");
