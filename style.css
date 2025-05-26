@@ -59,6 +59,8 @@ a, a:hover, a:active, a:visited { color: white; }
 body{
     margin:0;
     font-family:'Didact-Gothic', sans-serif;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
 .subheading{
