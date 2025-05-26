@@ -56,12 +56,6 @@ h1{
 }
 a, a:hover, a:active, a:visited { color: white; }
 
-.passwordPage{
-  margin: auto;
-  text-align: center;
-  margin-top: 25%;
-}
-
 body{
     margin:0;
     font-family:'Didact-Gothic', sans-serif;
