@@ -9,7 +9,7 @@ var allowedKeys = {
 };
 
 // audio for playing music
-var audio = new Audio("./music/Merry Go Round of Life - Howl's Moving Castle (Joe Hisaishi).mp3");
+var audio = new Audio("./music/cheatmusic.mp3");
 
 // the 'official' Konami Code sequence
 var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];

@@ -76,15 +76,6 @@ body{
 .test{
   background-color: cornflowerblue;
 }
-.imageTest{
-  opacity: 0;
-  animation: fadeIn 5s ease-in forwards;
-}
-.imageTest2{
-  opacity: 0;
-  animation: fadeIn 5s ease-in forwards;
-  animation-delay: 5s; /* Delay the start of the animation by 2 seconds */
-}
 .index{
   background-image: url("./images/Grainne\ +\ Robert~105.avif");
   color: white;
@@ -119,6 +110,11 @@ body{
   /*gap: 10px; /* Adjust the gap as needed */
 }
 
+.split-row-half {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Three columns of equal width */
+  /*gap: 10px; /* Adjust the gap as needed */
+}
 .colored-box {
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
   color: #333; /* Text color */
