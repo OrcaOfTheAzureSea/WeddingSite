@@ -74,8 +74,8 @@ function closeKonami(){
   audio.pause();
   audio.currentTime=0;
 
-  var llamaImage = document.getElementById("llama");
-  llamaImage.hidden = true;
+  var cheatSection = document.getElementById("cheatCode");
+  cheatSection.hidden = true;
   var content = document.getElementById("wrapper");
   content.hidden = false;
 }
