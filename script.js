@@ -47,8 +47,8 @@ window.onload = function() {
 function activateCheats() {
   audio.play();
 
-  var llamaImage = document.getElementById("llama");
-  llamaImage.hidden = false;
+  var cheatSection = document.getElementById("cheatCode");
+  cheatSection.hidden = false;
   var content = document.getElementById("wrapper");
   content.hidden = true;
 }
