@@ -15,6 +15,9 @@ var audio = new Audio("./music/cheatmusic.mp3");
 var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
 var mobileKonamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right'];
 
+// a variable to store the touch sequence for mobile devices
+let touchSequence = [];
+
 // a variable to remember the 'position' the user has reached so far.
 var konamiCodePosition = 0;
 
@@ -41,15 +44,19 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+// add touch event listeners for mobile devices
 document.addEventListener("touchstart", handleTouchStart);
 document.addEventListener("touchend", handleTouchEnd);
 
+// Variables to store the start and end coordinates of the touch
 let startX, startY, endX, endY;
+
 
 window.onload = function() {
   includeHTML();
 };
 
+// Function to activate cheats
 function activateCheats() {
   audio.play();
 
@@ -59,11 +66,13 @@ function activateCheats() {
   content.hidden = true;
 }
 
+// Function to handle touch start event
 function handleTouchStart(event) {
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
 }
 
+// Function to handle touch end event
 function handleTouchEnd(event) {
     endX = event.changedTouches[0].clientX;
     endY = event.changedTouches[0].clientY;
@@ -75,6 +84,7 @@ function handleTouchEnd(event) {
     }
 }
 
+// Function to determine the swipe direction
 function getSwipeDirection(x1, y1, x2, y2) {
     let deltaX = x2 - x1;
     let deltaY = y2 - y1;
@@ -85,6 +95,7 @@ function getSwipeDirection(x1, y1, x2, y2) {
     }
 }
 
+// Function to check if the mobile Konami code has been entered
 function checkMobileKonamiCode() {
     if (touchSequence.length > mobileKonamiCode.length) {
         touchSequence.shift();
@@ -110,6 +121,7 @@ function imageClose(){
   modal.style.display = "none"
 }
 
+// Function to close the Konami code cheat section
 function closeKonami(){
   
   audio.pause();
