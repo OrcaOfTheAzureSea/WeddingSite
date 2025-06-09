@@ -129,6 +129,14 @@ body{
   text-shadow: 0 0 black;
 }
 
+.colored-box a,  
+.colored-box a:hover,  
+.colored-box a:active,  
+.colored-box a:visited {  
+    color: black;  
+}
+
+
 .welcome{
   background-image: url("./images/flowers.avif");
 }
