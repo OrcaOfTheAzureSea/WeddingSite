@@ -13,6 +13,7 @@ var audio = new Audio("./music/cheatmusic.mp3");
 
 // the 'official' Konami Code sequence
 var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+var mobileKonamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right'];
 
 // a variable to remember the 'position' the user has reached so far.
 var konamiCodePosition = 0;
@@ -40,6 +41,11 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+document.addEventListener("touchstart", handleTouchStart);
+document.addEventListener("touchend", handleTouchEnd);
+
+let startX, startY, endX, endY;
+
 window.onload = function() {
   includeHTML();
 };
@@ -53,6 +59,41 @@ function activateCheats() {
   content.hidden = true;
 }
 
+function handleTouchStart(event) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+}
+
+function handleTouchEnd(event) {
+    endX = event.changedTouches[0].clientX;
+    endY = event.changedTouches[0].clientY;
+
+    let direction = getSwipeDirection(startX, startY, endX, endY);
+    if (direction) {
+        touchSequence.push(direction);
+        checkMobileKonamiCode();
+    }
+}
+
+function getSwipeDirection(x1, y1, x2, y2) {
+    let deltaX = x2 - x1;
+    let deltaY = y2 - y1;
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        return deltaX > 0 ? "right" : "left";
+    } else {
+        return deltaY > 0 ? "down" : "up";
+    }
+}
+
+function checkMobileKonamiCode() {
+    if (touchSequence.length > mobileKonamiCode.length) {
+        touchSequence.shift();
+    }
+    if (touchSequence.join() === mobileKonamiCode.join()) {
+        activateCheats();
+        touchSequence = []; // reset the sequence after activation
+    }
+}
 
 function imageClick(e){
   // Grab the modal elements needed
